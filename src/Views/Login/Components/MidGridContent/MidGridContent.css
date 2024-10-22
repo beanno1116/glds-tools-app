@@ -1,0 +1,16 @@
+.mid__grid__content {
+    position: relative;
+    padding: 1.5em 1em;
+}
+
+.mid__grid__login__p span {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    font-size:1.5rem;
+    line-height:1;
+    color:white;
+    font-family:futura;
+    text-align: center;
+}

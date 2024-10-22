@@ -1,0 +1,18 @@
+.loc-logo-col {
+    position:relative;
+    height: 100%;
+    width:65%;
+    padding:0.75em;
+}
+.loc-logo-col div img {
+    
+    cursor:pointer;
+}
+
+.loc-logo-col div .glds-logo {
+    position:absolute;
+    left:0.75em;
+    bottom:0.75em;
+    width:125px;
+    height:50px;    
+}

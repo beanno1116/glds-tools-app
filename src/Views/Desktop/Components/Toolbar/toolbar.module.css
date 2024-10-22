@@ -1,0 +1,33 @@
+/* DESKTOP TOOLBAR STYLES CSS */
+.desktop_toolbar {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 1em;
+  justify-content: flex-start;
+  padding: .5em;
+}
+.desktop_tb_logo_section {
+  display: flex;
+  gap: .5em;
+  padding-left: .75em;
+}
+.desktop_tb_logo_text {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 3rem;
+  font-weight: 900;
+  background: -webkit-linear-gradient(left,#00A36A,#236AA0);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.desktop_tb_subtext {
+  display: flex;
+  align-items: center;
+  font-family: "Nunito Sans", sans-serif;;
+  font-weight: 500;
+  color: #DCE0D9;
+}
+.desktop_tb_searchfield_section {
+  display: flex;
+  align-items: center;
+}

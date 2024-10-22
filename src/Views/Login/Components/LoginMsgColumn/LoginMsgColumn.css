@@ -1,0 +1,17 @@
+.login-p-col {
+    display:flex;
+    flex-flow:column;
+    justify-content:center;
+    align-items:flex-start;
+    height: 100%;
+    padding:.75em;
+}
+
+.login-p {
+    text-align:right;
+    font-size:1.5rem;
+    line-height:1;
+    padding-right:0.75em;
+    color:white;
+    font-family:futura;
+}

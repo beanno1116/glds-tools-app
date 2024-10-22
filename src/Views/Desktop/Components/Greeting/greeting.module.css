@@ -1,0 +1,16 @@
+/* DESKTOP GREETING STYLES CSS */
+.desktop_greeting h1 {  
+  color: #DCE0D9;
+  font-size: 3.75rem;
+  font-family: "Bowlby One SC", sans-serif;
+}
+
+.greeting_containter {
+  display: flex;
+  gap: 1rem;
+  padding-left: 2rem;
+}
+
+h1.greeting_name {
+  color: #00A36A;
+}

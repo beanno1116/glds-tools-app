@@ -1,0 +1,93 @@
+.bottom__grid__content {
+    position:relative;
+    display:flex;
+    flex-flow:column;
+    justify-content:center;
+    align-items:center;
+    height: 100%;
+    padding: 2em 2em;
+}
+.bottom__grid__content .flogin {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.bottom__grid__content .flogin label {
+    color:white;
+    font-family:futuraBold;
+}
+/* #pwd-tf, #email-tf {
+    font-family: futura;
+    font-size: 1.25rem;
+} */
+
+.login-btn-row {
+    position: relative;
+    display:flex;
+    flex-wrap:nowrap;
+    justify-content:space-between;
+    padding: 0.75em 0;
+}
+
+.login-btn-row #submit-btn {
+    position: relative;
+    width: 33%;
+    background-color:#1B263B;
+    border-color:#1B263B;
+    font-family: futura;
+}
+
+.login-btn-row #show-keypad-btn {
+    background-color:#1B263B;
+    border-color:#1B263B;            
+}
+
+.login-btn-row #clear-btn {
+    position: relative;
+    width: 33%;
+    background-color:#1B263B;
+    border-color:#1B263B;
+    font-family: futura;
+}
+
+.error {
+    position: relative;
+    animation: shake .1s linear;
+    animation-iteration-count: 3;
+    border:1px solid #EF3E36;
+    box-shadow: 0 0 10px #EF3E36;
+}
+
+.error_msg {
+    display: none;
+    padding-top: 0.75em;
+    font-size: 0.8rem;
+    color: #EF3E36;
+    text-align: center;
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+}
+.error_msg.hide {
+    opacity: 0;
+}
+
+.error:focus {
+    outline: none !important;
+    border:1px solid #EF3E36;
+    box-shadow: 0 0 10px #EF3E36;
+}
+
+.glds__logo__container {
+    justify-self: flex-end;
+}
+.glds__logo__container .glds-logo {
+    width:125px;
+    height:50px;    
+}
+
+
+
+@keyframes shake {
+    0% { left: -5px; }
+    100% { right: -5px; }
+}
