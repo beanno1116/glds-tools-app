@@ -1,0 +1,9 @@
+.form_heading {
+  font-family: "Nunito Sans", sans-serif;
+  text-align: center;
+  padding: .5rem 0;
+}
+
+.form_body {
+  padding-bottom: 1rem;
+}

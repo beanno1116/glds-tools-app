@@ -1,0 +1,258 @@
+.modal_template {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background-color: #272537;  
+}
+
+.modal_nav {
+  display: flex;
+}
+
+.modal_title {
+  flex: 1;
+  padding: 1rem;
+}
+
+.modal_nav_wrapper {  
+  flex: .5;
+  text-align: center;
+  margin: auto;
+}
+.modal_nav_menu {
+  /* flex: 1; */
+  /* display: flex; */
+  align-items: center;
+  /* gap: 1rem; */
+  /* padding: 1rem 1rem; */
+  border-radius: 20px;
+  background-color: #302d40 ;
+  
+  display: inline-grid; /* OR inline-grid*/
+  grid-auto-flow: column; /* OR row */
+  grid-auto-columns: 1fr;
+  width: max-content;
+}
+.modal_nav_menu_item {
+  flex: 1;
+  padding: 1rem 1rem;
+  cursor: pointer;
+  background-color: transparent;
+  border: 0;
+  outline: none;
+  color: snow;
+  font-size: 1.25rem;
+}
+
+.modal_nav_menu_item:first-child {
+  border-radius: 20px 0 0 20px;
+  border-right: 1px solid #272537;
+}
+.modal_nav_menu_item:last-child {
+  border-radius: 0 20px 20px 0;
+  border-left: 1px solid #272537;
+}
+
+
+.modal_nav_menu_item:hover {
+  background-color: #236aa079;
+  background-color: red
+}
+
+.modal_nav_menu_item.active {
+  background-color: #212134; 
+  color: color-mix(in srgb, #236aa0 80%, snow 20%);    
+}
+
+
+
+.modal_body {
+  position: relative;
+  flex: 1;    
+  padding: 1.5rem;
+}
+
+.modal_nav_button {
+  display: flex;
+  justify-content: flex-end;
+  flex: 1;
+  padding: 1rem;
+}
+.modal_close_btn_wrapper {  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: #212134;  
+  border-radius: 50%;
+  padding-bottom: 3px;
+}
+
+
+.modal_close_btn {  
+  background-color: transparent;
+  border: 0;
+  outline: none;
+  box-shadow: none;
+  color: snow;
+  cursor: pointer;
+}
+
+
+.modal_dashboard { 
+  position: relative;
+  width: 100%;
+  height: 100%; 
+}
+.modal_dashboard_view {
+  position: absolute;
+  width: 100%;
+  height: 100%;  
+}
+.modal_dashboard_layout {
+  display: flex;  
+  flex-direction: column;
+  gap: 1.5rem;
+  height: 100%;
+}
+.modal_dashoard_layout_row {
+  display: flex;  
+  flex: 1;
+  gap: 1.5rem;  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.modal_dashboard_col {
+  display: flex;
+  flex-direction: column;
+  flex: .33;
+  gap: 1rem;
+  height: 100%;
+  padding: 1rem 0;
+}
+
+.modal_widget {
+  background-color: #302d40; 
+  border-radius: 10px;
+  padding: 1rem;
+}
+.modal_widget_title {
+  position: relative;
+  text-align: center;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.widget_edit_button_wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+}
+.modal_widget_title:hover .widget_edit_button_wrapper {
+  opacity: 1;
+}
+.modal_widget_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem;
+  gap: 1rem;
+  background-color: #212134; 
+  flex: 1;
+}
+.modal_widget_row {
+  display: flex;
+  gap: .5rem;
+}
+.modal_widget_label {
+  flex: 1;
+  font-size: 1.5rem;
+}
+.modal_widget_detail_span {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  text-transform: capitalize;
+}
+
+
+
+
+
+
+
+
+
+
+
+.low_stock_list_item {
+  display: flex;
+  flex-wrap: nowrap;
+  padding: .75rem;
+  background-color: #212134;
+  cursor: pointer;
+}
+.low_stock_list_item_detail {
+  display: flex;
+  flex-direction: column;
+  gap: .25rem;
+  flex: 1;
+}
+.low_stock_list_item_name {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.low_stock_list_item_model {
+  /* padding-left: .25rem; */
+  padding-top: .25rem;
+  font-size: 1.25rem;
+  color: rgba(255, 250, 250, 0.775);
+}
+.modal_widget_list {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  /* padding: 1rem; */
+  overflow-y: scroll;
+}
+.modal_widget_list::-webkit-scrollbar {
+  display: none;
+}
+.low_stock_list_item_count {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: .25rem;  
+  font-size: 1.5rem;
+}
+.low_stock_list_item_count.danger {
+  color: red;
+}
+.low_stock_list_item_count.warning {
+  color: orange;
+}

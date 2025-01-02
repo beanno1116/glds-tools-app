@@ -1,0 +1,142 @@
+.adduser_panel {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  
+  padding: .5rem .75rem;  
+}
+.adduser_panel_title {
+  text-align: center;  
+}
+
+.adduser_panel_body {
+  padding: .5rem 0;
+  flex: 1;  
+}
+
+.add_user_form {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  height: 100%;
+}
+.add_user_form_row {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 1rem;
+  padding: 0 1rem;
+}
+.col_flex_1_row {
+  flex: 1;
+}
+.add_user_form label {
+  flex:.25;
+  text-align: right;
+}
+.add_user_form_row input,
+.add_user_form_row select {
+  flex: 1;
+}
+.form_file_drop {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 1rem;
+  gap: 1rem;
+}
+.form_file_dropzone {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  border: 2.5px dashed #486581;
+  border-radius: 6px;
+}
+
+.form_file_dropzone_content {
+  display: flex;
+  flex-direction: column;
+  gap: .75rem;
+  padding: .5rem;
+}
+.form_file_dropzone_label {
+  font-family: "Nunito Sans", sans-serif;
+  color: rgba(255, 250, 250, 0.352);
+  text-align: center;
+}
+.form_file_dropzone_icon {
+  position: relative;
+  margin: 0 auto;
+  color: rgba(255, 250, 250, 0.141);
+}
+.form_file_dropzone_icon.valid {
+  color: green;
+}
+.form_file_dropzone_text {
+  font-family: "Nunito Sans", sans-serif;
+  color: rgba(255, 250, 250, 0.352);
+  text-align: center;
+}
+.form_file_dropzone_text.valid {
+  color: snow;
+}
+
+
+
+
+.adduser_panel_nav {
+  display: flex;
+  justify-content: flex-start;
+}
+
+
+.app_text_input {
+  -moz-appearance: textfield;
+  -webkit-appearance: textfield;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: var(--input-height);  
+  padding-left: 1rem;
+  user-select: none;
+  border: 1px solid var(--input-bg-clr);
+  border-radius: 5px;
+  /* background-color: var(--input-bg-clr); */
+  background-color: #262829;
+  font-family: 'Roboto', sans-serif;  
+  color: white;
+  cursor: pointer;
+}
+.app_icon_button {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  /* height: 100%; */
+  padding: .25rem;
+  border: 0;
+  outline: 0;
+  box-shadow: none;
+  /* aspect-ratio: 1 / 1; */
+  cursor: pointer;
+  background-color: transparent;
+  color: snow;
+  gap: .5rem;
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 700;
+  font-size: 1.2rem;
+  border: 1px solid gray;
+}
+.app_icon_button:first-child {
+  border-radius: 4px 0 0 4px;
+}
+.app_icon_button:last-child {
+  border-radius: 0 4px 4px 0;
+}
+.app_icon_button.active {
+  background-color: #0e611c;
+  color: snow;
+  text-decoration: underline;
+}

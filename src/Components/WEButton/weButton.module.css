@@ -1,0 +1,93 @@
+
+
+.we_button {
+  --backgroundColor: #236aa068;
+  --borderColor: #486581;
+  --borderRadius: .5rem; 
+
+  /* Button focus vars */
+  --onFocusBorderColor: #102A43;
+  --onFocusbackgroundColor: #102A43;
+
+  /* Button font vars */
+  --fontSize: 1.25rem;
+  --fontFamily: 'Secular One', sans-serif;
+  --color: snow;
+
+  all: unset;
+  position: relative;
+  display: inline-flex;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+  padding: .25em 1em;
+  border-radius: var(--borderRadius);
+  font-family: var(--fontFamily);
+  font-size: var(--fontSize);
+  line-height: 1.6;
+  letter-spacing: 1px;
+  pointer-events: stroke;
+  cursor: pointer;  
+  overflow: hidden;
+  border: 2px solid #236aa0;
+  background-color: var(--backgroundColor);
+  color: var(--color);
+  transform: scale(1);
+  transition: transform 0.08s ease-in-out;  
+  
+}
+.we_button:disabled {
+  cursor: default;
+}
+.we_button:focus {
+  border: 2px solid #2196f3;
+  box-shadow: 0px 3px 2px 6px #00bbbb26, 0px -3px 2px 6px #00bbbb26;
+}
+.we_button:active:enabled {
+    transform: scale(.98);
+    border: 2px solid #2196f3;
+    box-shadow: 0px 3px 2px 6px #00bbbb26, 0px -3px 2px 6px #00bbbb26;
+}
+.we_button:active:enabled {
+  transform: scale(.98);
+  border: 2px solid #2196f3;  
+  box-shadow: 0px 3px 2px 6px #00bbbb26, 0px -3px 2px 6px #00bbbb26;
+}
+
+.we_button:disabled {
+  border: 2px solid color-mix(in srgb, var(--backgroundColor) 25%, #9c9e9f74 75%);  
+  background-color: color-mix(in srgb, var(--backgroundColor) 50%, #9c9e9f74 50%);
+  color: color-mix(in srgb, var(--color) 50%, #9c9e9f74 50%);
+}
+.we_button::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 25%;
+    background-color: var(--backgroundColor);
+    background-color: #2196f3;
+    opacity: .2;    
+    z-index: -1;
+    transform:  scaleX(0);
+    transform-origin: center;
+    transition: transform .2s ease-in-out, opacity 0.2s ease-in-out;    
+}
+
+.we_button:enabled:hover::after { 
+  transform: scaleX(1.5);
+  color: black;
+}
+.we_button:active::after { 
+    background-color: var(--backgroundColor);
+    box-shadow: 1px 1px 4px inset black;
+}
+
+
+.we_button.outline {
+    background-color: transparent;
+    border: 2px solid var(--backgroundColor);
+    color: black;
+}

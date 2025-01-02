@@ -6,6 +6,34 @@
   justify-content: flex-start;
   padding: .5em;
 }
+.logo_section,
+.nav_section {
+  flex: 1;  
+}
+
+.nav_section {
+  display: inline-flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1rem;
+  padding-right: 1rem;
+}
+.toolbar_button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  padding: .5rem;
+  margin: 0;
+  border: 0;
+  background-color: var(--secondary-bg-clr);
+  color: #00A36A;
+  cursor: pointer;
+}
+
 .desktop_tb_logo_section {
   display: flex;
   gap: .5em;
@@ -23,7 +51,7 @@
 .desktop_tb_subtext {
   display: flex;
   align-items: center;
-  font-family: "Nunito Sans", sans-serif;;
+  font-family: "Nunito Sans", sans-serif;
   font-weight: 500;
   color: #DCE0D9;
 }

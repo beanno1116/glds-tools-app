@@ -1,0 +1,54 @@
+.content {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 500ms;
+}
+.content[aria-hidden="false"] {
+  grid-template-rows: 1fr;
+}
+.content > div {
+  overflow: hidden;
+}
+
+.accordion {  
+  color: #effeef;  
+  line-height: 1.5;
+}
+
+.panel {
+  /* padding: 1rem; */
+  /* border: 1px solid; */
+}
+
+.accordion_header {
+  position: relative;
+  display: block;
+  padding: .5rem .5rem;
+  font-size: 1.25rem;
+}
+
+.trigger {
+  position: relative;
+  background: transparent;
+  border: 0;
+  font: inherit;
+  color: inherit;
+  padding: 0;
+}
+
+.header_icon {
+  position: absolute;
+  right: .5rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.header_icon svg {
+  transform: rotate(0deg);
+  transition: transform 500ms;
+}
+
+.trigger[aria-expanded="true"] + .header_icon svg {
+  transform: rotate(90deg);
+}
+

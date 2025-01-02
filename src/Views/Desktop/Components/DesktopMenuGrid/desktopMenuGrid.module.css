@@ -1,0 +1,51 @@
+/* DESKTOP MENU GRID STYLES CSS */
+.desktop_menu_grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(300px,1fr));  
+  gap: 2rem;
+  flex: 1;  
+  background-color: var(--secondary-bg-clr);
+  border-radius: 8px;
+  margin: 1rem 2rem;
+  padding: 2rem 2rem;
+}
+
+
+/* GRID TILE STYLES */
+.grid_tile {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  border-radius: 10px;
+  background: rgb(35,106,160);
+background: linear-gradient(135deg, rgba(29, 88, 132, 0.177) 0%, rgba(24, 71, 108, 0.42) 75%);
+  cursor: pointer;
+}
+
+.grid_tile_header {
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
+}
+
+.tile_header_title {
+  flex: 1;
+  padding-top: .25rem;
+  padding-left: .5rem;
+}
+.tile_header_title > h1 {
+  font-family: "Signika Negative",sans-serif;
+  font-size: 1.25rem;
+  color: snow;
+}
+.tile_header_nav {
+
+}
+
+.grid_tile_body {
+
+}
+
+.grid_tile_footer {
+  
+}

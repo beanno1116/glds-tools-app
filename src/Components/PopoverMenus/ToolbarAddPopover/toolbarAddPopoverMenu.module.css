@@ -1,0 +1,52 @@
+.toolbar_po_menu {
+  padding: 1rem 0;
+    /* background: linear-gradient(169deg, rgba(59, 15, 70, 0.41) 0%, rgba(81, 37, 92, 0.515) 39%, rgba(55, 58, 68, 1) 100%); */
+  background-color: #373a44;
+  box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+
+.toolbar_po_menu_title {
+  padding: .5rem 1rem;
+  padding-top: .25rem;
+  text-align: center;
+  font-weight: 900;
+  color: snow;
+  border-radius: 8px;
+}
+
+.toolbar_po_menu_list_item {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 1rem;
+  padding: .5rem;
+  padding-left: 1rem;
+  padding-right: 2rem;
+  font-size: 1.5rem;
+  color: snow;
+}
+
+.toolbar_po_menu_list_item_icon {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  padding-left: .25rem;  
+  padding-bottom: .25rem;
+}
+.toolbar_po_menu_list_item_text {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex: 1;  
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.toolbar_po_menu_ul {
+ 
+}
+.toolbar_po_menu_list_item:hover {
+  background-color: aliceblue;
+  color: black;
+}

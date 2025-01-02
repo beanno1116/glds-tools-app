@@ -1,0 +1,50 @@
+.file_dropzone {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  min-height: 200px;
+  gap: 1rem;
+}
+.dropzone {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  border: 2.5px dashed #486581;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.dropzone:hover {
+  border: 2.5px dashed #2196f3;
+  box-shadow: 0px 3px 2px 6px #00bbbb26, 0px -3px 2px 6px #00bbbb26;
+}
+
+.dropzone_content {
+  display: flex;
+  flex-direction: column;
+  gap: .75rem;
+  padding: .5rem;
+}
+.dropzone_label {
+  font-family: "Nunito Sans", sans-serif;
+  color: rgba(255, 250, 250, 0.352);
+  text-align: center;
+}
+.dropzone_icon {
+  position: relative;
+  margin: 0 auto;
+  color: rgba(255, 250, 250, 0.141);
+}
+.dropzone_icon.valid {
+  color: green;
+}
+.dropzone_text {
+  font-family: "Nunito Sans", sans-serif;
+  color: rgba(255, 250, 250, 0.352);
+  text-align: center;
+}
+.dropzone_text.valid {
+  color: snow;
+}
