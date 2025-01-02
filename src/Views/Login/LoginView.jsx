@@ -9,7 +9,7 @@ import MidGridContent from './Components/MidGridContent/MidGridContent';
 import BottomGridContent from './Components/BottomGridContent/BottomGridContent';
 
 const LoginView = () => {
-
+  
   const screenWidth = () => {
     
     if(window.innerWidth <= 420){

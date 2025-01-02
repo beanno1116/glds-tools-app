@@ -1,0 +1,59 @@
+.tool_bar {
+  display: flex;  
+  padding: 1rem;
+  border-radius: 10px;
+  background-color: var(--secondary-bg-clr);
+  border: 1px solid var(--primary-border-clr);
+}
+
+.tool_bar_search {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  gap: 1rem;
+  height: 100%;
+}
+
+.tool_bar_view {
+  display: flex;
+  align-items: center;
+}
+.tool_bar_view_toggle_btn {
+  padding: .75rem;
+  background-color: transparent;
+  border: 0;  
+  color: snow;
+}
+.tool_bar_view_toggle_btn:first-child {
+  background-color: #00a36abb;
+  color: snow;
+  border-radius: 8px 0 0 8px;
+}
+.tool_bar_view_toggle_btn:last-child {
+  border-radius: 0 8px 8px 0;
+  background-color: var(--primary-bg-clr);
+  border: 1px solid var(--primary-border-clr);
+}
+
+.anchor_target {
+  position: absolute;
+  position-anchor: --filter-btn;
+  position-area: bottom right;
+  transform-origin: top left;
+  left: anchor(left);
+  /* max-height: 500px; */
+  margin-top: .5rem;
+  padding: 1rem;
+  border: 1px solid var(--primary-border-clr);
+  border-radius: 10px;
+  background-color: var(--input-bg-clr);
+  transform: scale(0);
+  opacity: 0;
+  z-index: 99999;
+  transition: transform .3s ease-in-out, opacity .3s ease-in-out;
+  /* overflow-y: scroll; */
+}
+.anchor_target.showing {
+  transform: scale(1);
+  opacity: 1;
+}

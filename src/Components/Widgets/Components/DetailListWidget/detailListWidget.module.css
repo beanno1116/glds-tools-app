@@ -1,0 +1,160 @@
+.detail_list {
+  font-family: "Nunito Sans", sans-serif;   
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  border-radius: 8px;
+  padding: 1.25rem;  
+  background-color: var(--secondary-bg-clr);  
+  border: 1px solid var(--primary-border-clr);
+}
+
+.header {
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-align: center;  
+  color: rgba(255, 250, 250, 0.843);
+}
+
+/***** List css styles *****/
+.list {
+  flex: 1;
+  scroll-padding: 0;
+}
+.list::-webkit-scrollbar {
+  display: none;
+}
+.list_wrapper {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+.list_ul {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: .75rem;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  
+}
+.list_ul::-webkit-scrollbar {
+  display: none;
+}
+
+
+
+/***** Low inventory list item component css styles *****/
+.list_item {
+  display: flex;
+  flex-wrap: nowrap;  
+  border-radius: 10px;
+  border: 1px solid transparent;  
+  background-color: var(--input-bg-clr);  
+  color: rgba(255, 250, 250, 0.843);
+  cursor: pointer;
+  scroll-snap-align: start;
+  gap: .5rem;
+}
+.list_item:hover {  
+  background-color: hsla(206, 64%, 38%, 0.5);  
+}
+.detail_column {
+  display: flex;
+  flex-direction: column;
+  gap: .25rem;
+  padding: .75rem;
+  flex: 1;
+}
+.detail_column > label,
+.detail_column > div {
+  font-size: 1.5rem;
+}
+.detail_column > span {
+  font-size: 1.1rem;
+}
+.detail_label {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-between;  
+  font-size: 1rem;
+}
+.detail_label h6 {
+  font-size: 1.25rem;
+}
+.detail_text {
+  padding-top: .25rem;
+  font-size: 1rem;
+  color: rgba(255, 250, 250, 0.775);
+}
+
+.detail_number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 .75rem;  
+  font-size: 1.5rem;
+  width: 75px;
+}
+.detail_number.danger {
+  color: red;
+}
+.detail_number.warning {
+  color: orange;
+}
+
+.detail_user {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+.detail_date {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex: 1;
+  padding-right: .75rem;
+}
+.list_item_icon {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  padding-top: 1.2rem;
+  color: rgba(219, 22, 48, 0.5);
+}
+
+
+.detail_row {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: .25rem;
+  flex: 1;
+}
+.main_detail {
+  position: relative;
+  flex: .75;    
+  min-width: 0;
+  padding: .75rem 0 .75rem .75rem;  
+  /* font-size: 1.25rem; */
+  /* background-color: purple; */
+}
+.main_detail > div {  
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 1.5rem;
+  /* background-color: red; */
+}
+.sub_detail {
+  display: flex;
+  flex: .25;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 1rem;
+  padding-right: .75rem;
+  /* background-color: green; */
+}

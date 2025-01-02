@@ -1,0 +1,264 @@
+.modal_template {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background-color: #272537;
+}
+
+.modal_nav {
+  display: flex;
+}
+
+.modal_title {
+  flex: 1;
+  padding: 1rem;
+}
+
+.modal_nav_wrapper {  
+  flex: .5;
+  text-align: center;
+  margin: auto;
+}
+.modal_nav_menu {
+  /* flex: 1; */
+  display: flex;
+  align-items: center;
+  /* gap: 1rem; */
+  /* padding: 1rem 1rem; */
+  border-radius: 20px;
+  background-color: #302d40; 
+  
+}
+.modal_nav_menu_item {
+  flex: 1;
+  padding: 1rem 1rem;
+  cursor: pointer;
+  background-color: transparent;
+  border: 0;
+  outline: none;
+  color: snow;
+}
+.modal_nav_menu_item:first-child {
+  border-radius: 20px 0 0 20px;
+  border-right: 1px solid #272537;
+}
+.modal_nav_menu_item:last-child {
+  border-radius: 0 20px 20px 0;
+  border-left: 1px solid #272537;
+}
+
+
+.modal_nav_menu_item:hover {
+  background-color: #236aa079;
+}
+
+.modal_nav_menu_item.active {
+  background-color: #212134; 
+  color: color-mix(in srgb, #236aa0 75%, snow 25%);
+  font-weight: 900;
+}
+
+
+
+.modal_body {
+  flex: 1;  
+}
+
+.modal_footer {
+  display: flex;
+  justify-content: flex-end;
+  padding: 1rem;
+}
+
+
+
+.modal_dashboard {  
+  display: flex;
+  padding: 0 1rem;
+  gap: 1rem;
+  height: 100%;
+}
+.modal_dashboard_col {
+  display: flex;
+  flex-direction: column;
+  flex: .33;
+  gap: 1rem;
+  height: 100%;
+  padding: 1rem 0;
+}
+
+
+/***** MANAGE UYSER MODEL CSS STYYLES *****/
+.modal_manage {
+  display: grid;
+  grid-template-columns: .33fr 1fr;
+  gap: 1rem;
+  height: 100%;
+  padding: 1rem;
+}
+.user_form_widget {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: #302d40;
+  height: 100%;
+  border-radius: 10px;
+  padding: 1rem;
+}
+.user_form_containter {
+  display: flex;
+  /* flex-direction: column; */
+  gap: 1rem;        
+}
+.user_form_button_container {
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+}
+.user_form_section {  
+  display: flex;
+  flex: 1;  
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: #272537;
+}
+
+
+.user_form_widget_emp_details {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: #272537;
+}
+
+
+
+
+
+
+.modal_widget {
+  background-color: #302d40; 
+  border-radius: 10px;
+  padding: 1rem;
+}
+.modal_widget_title {
+  position: relative;
+  text-align: center;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.widget_edit_button_wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+}
+.modal_widget_title:hover .widget_edit_button_wrapper {
+  opacity: 1;
+}
+.modal_widget_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem;
+  gap: 1rem;
+  background-color: #212134; 
+  flex: 1;
+}
+.modal_widget_row {
+  display: flex;
+  gap: .5rem;
+}
+.modal_widget_label {
+  flex: 1;
+  font-size: 1.5rem;
+}
+.modal_widget_detail_span {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  text-transform: capitalize;
+}
+
+
+
+
+/*** EMPLOYEE COUNT WIDGET CSS STYLES *****/
+.employee_count_widget {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: fit-content;
+  padding: 1.25rem;
+}
+.employee_count_widget_value {  
+  text-align: center;
+  font-size: 2rem;
+}
+
+.employee_by_widget {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  flex: 1;
+  min-width: 300px;
+}
+
+.modal_nav_button {
+  display: flex;
+  justify-content: flex-end;
+  flex: 1;
+  padding: 1rem;
+}
+.modal_close_btn_wrapper {  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  background: #212134;  
+  border-radius: 50%;
+  padding-bottom: 3px;
+  cursor: pointer;
+  transition: background .5s ease-in-out;
+}
+.modal_close_btn_wrapper:hover {
+  background: #236aa079;
+}
+
+.modal_close_btn {  
+  background-color: transparent;
+  border: 0;
+  outline: none;
+  box-shadow: none;
+  color: snow;
+  cursor: pointer;
+}
+
+
+
+.flex_1 {
+  flex: 1;  
+}
+.flex_row {
+  flex-direction: row;
+}
+.scroll_view {
+  overflow-x: scroll;
+}
+.flex_column {
+  flex-direction: column;
+}
+.flex_justify_start {
+  justify-content: flex-start;
+}
+
+.align_center {
+  text-align: center;
+}

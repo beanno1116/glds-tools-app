@@ -1,0 +1,72 @@
+.context_panel {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border-radius: 8px 0 0 8px;
+  background-color: #1a1d307e;
+  color: snow;  
+  padding: 1rem;
+}
+
+
+
+.context_panel_toolbar {
+  display: flex;
+  border-radius: 8px 0 0 0;
+  /* background-color: #62688c7e; */
+  /* background-color: blueviolet; */
+}
+
+.context_panel_toolbar_detail {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex: 1;    
+  padding-left: .5rem;
+}
+.context_panel_toolbar_detail span h1 {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 1.75rem;
+}
+
+.context_panel_body {
+  flex: 1;  
+}
+.context_panel_toolbar_buttons {
+  position: relative;
+  display: flex;
+  flex: 1;
+  gap: .25rem;
+  justify-content: flex-end;
+  margin-right: .25rem;
+}
+
+
+
+
+.context_panel_footer {
+  display: flex;
+  justify-content: space-evenly;  
+  border-radius: 0 0 0 8px;
+  padding: .5rem .25rem;
+  /* background-color: chocolate; */
+}
+
+
+
+
+
+.toolbar_button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: .25rem;
+  border: 0;
+  outline: 0;
+  box-shadow: none;
+  aspect-ratio: 1 / 1;
+  cursor: pointer;
+  background-color: transparent;
+  color: snow;
+}

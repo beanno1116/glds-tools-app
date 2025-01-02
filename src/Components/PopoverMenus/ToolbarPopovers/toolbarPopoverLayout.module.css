@@ -1,0 +1,81 @@
+.toolbar_po_menu {
+  min-width: 21.88rem;
+  /* padding: 1rem 0; */
+  border-radius: 8px;
+  border: 2px solid #62688c7e;
+
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+
+.toolbar_po_menu_title {
+  padding: .5rem 1rem;
+  padding-top: .25rem;
+  text-align: center;
+  font-weight: 900;
+  color: snow;
+}
+
+.toolbar_po_menu_list_item {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: .5rem;
+  padding: .5rem;
+  padding-left: 1rem;
+  padding-right: 2rem;
+  font-size: 1.5rem;
+  color: snow;
+}
+
+.toolbar_po_menu_list_item_icon {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  padding-left: .25rem;  
+  padding-bottom: .25rem;
+}
+.toolbar_po_menu_list_item_text {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex: 1;  
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  text-transform: capitalize;
+}
+
+ul[role='list'].toolbar_po_menu_ul {
+ margin-bottom: .5rem;
+}
+.toolbar_po_menu_list_item:hover {
+  background-color: hsla(206, 64%, 38%, 0.5);
+  
+}
+
+.toolbar_po_menu_loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* HTML: <div class="loader"></div> */
+.toolbar_po_menu_loader {
+  --d:22px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  color: #25b09b;
+  box-shadow: 
+    calc(1*var(--d))      calc(0*var(--d))     0 0,
+    calc(0.707*var(--d))  calc(0.707*var(--d)) 0 1px,
+    calc(0*var(--d))      calc(1*var(--d))     0 2px,
+    calc(-0.707*var(--d)) calc(0.707*var(--d)) 0 3px,
+    calc(-1*var(--d))     calc(0*var(--d))     0 4px,
+    calc(-0.707*var(--d)) calc(-0.707*var(--d))0 5px,
+    calc(0*var(--d))      calc(-1*var(--d))    0 6px;
+  animation: l27 1s infinite steps(8);
+}
+@keyframes l27 {
+  100% {transform: rotate(1turn)}
+}

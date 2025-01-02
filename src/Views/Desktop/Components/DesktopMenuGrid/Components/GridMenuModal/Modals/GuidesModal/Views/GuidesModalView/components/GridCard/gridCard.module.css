@@ -1,0 +1,59 @@
+.grid_card {
+  display: flex;
+  flex-direction: column;
+  width: 325px;  
+  height: 325px;
+  background-color: var(--secondary-bg-clr);
+  border: 1px solid var(--primary-border-clr);
+  border-radius: 10px;
+}
+.grid_card_title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  padding: 1rem .5rem;
+  text-align: center;
+}
+.grid_card_body {
+  flex: 1;
+}
+.grid_card_footer {
+  display: flex;
+  padding: 1rem;
+  gap: 1rem;
+}
+.grid_card_footer_buttons {
+  display: flex;
+  flex: 1;
+  gap: .5rem;
+}
+.grid_card_footer_buttons > button {
+  flex: 1;
+  border: 0;
+  outline: none;
+  background-color: transparent;
+  color: snow;
+  font-size: 1rem;
+  font-weight: 700;
+  font-family: 'Secular One', sans-serif;
+  border-radius: .5rem; 
+  padding: .5rem .25rem;
+  border: 2px solid #236aa0;
+  cursor: pointer;
+}
+.grid_card_footer_fav_button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0;
+  outline: none;
+  background-color: transparent;
+  color: snow;
+  font-size: 1rem;
+  font-weight: 700;
+  font-family: 'Secular One', sans-serif;
+  border-radius: .5rem; 
+  padding: .6rem .7rem;
+  border: 2px solid #236aa0;
+  color: rgba(255, 0, 0, 0.707);
+  cursor: pointer;
+}

@@ -1,0 +1,131 @@
+.container {
+  --defaultHeight: calc(3.5rem + 2px);  
+  --sm-height: calc(2.75rem + 2px);
+
+  --fontSize: 1.25rem;
+  --sm-fontSize: .80rem;
+
+  position: relative;  
+  z-index: 0;
+  /* width: 100%; */
+}
+
+
+/***** Basic text input css styles *****/
+.text_field {
+  --backgroundColor: var(--input-backgroundColor);
+  --borderColor: var(--input-borderColor);
+  --height: var(--defaultHeight);
+  --borderRadius: .25rem; 
+  --color: var(--input-color);
+  
+
+  position: relative;
+  display: block;  
+  width: 100%;
+  height: var(--height);
+  padding: 1.2rem 0.75rem;    
+  background-clip: padding-box;
+  background-color: var(--backgroundColor);
+  border: 2px solid var(--borderColor);
+  appearance: none;
+  border-radius: var(--borderRadius);
+  font-size: var(--fontSize);
+  font-weight: 400;
+  line-height: 1.5;
+  /* font-family: var(--fontFamily); */
+  color: var(--color);
+}
+
+/* size attribute styles */
+.text_field.sm {
+  height: var(--sm-height);
+  font-size: var(--sm-fontSize);
+}
+
+.text_field::placeholder {
+  color: transparent;
+}
+.text_field:hover {
+border: 2.5px solid #2196f3;
+box-shadow: 0px 3px 2px 6px #00bbbb26, 0px -3px 2px 6px #00bbbb26;
+}
+.text_field:focus {
+  padding-top: 1.625rem;
+  padding-bottom: 0.625rem;
+  outline: 0;
+  border: 2px solid #2196f3;
+  box-shadow: 0px 3px 2px 6px #00bbbb26, 0px -3px 2px 6px #00bbbb26;  
+}
+.text_field:not(:placeholder-shown) {
+  padding-top: 1.625rem;
+  padding-bottom: 0.625rem;
+}
+
+
+
+/* TextField Label CSS styles */
+.text_field:focus ~ .text_field_label {
+  opacity: .65;
+  transform: scale(.75) translateY(-0.9rem) translateX(0.15rem);
+}
+.text_field:focus ~ .text_field_label.sm {
+opacity: .65;
+transform: scale(.75) translateY(-0.5rem) translateX(0.15rem);
+}
+
+.text_field:not(:placeholder-shown) ~ .text_field_label {
+  opacity: .65;
+  transform: scale(.75) translateY(-0.9rem) translateX(0.15rem);
+}
+.text_field:not(:placeholder-shown) ~ .text_field_label.sm {
+opacity: .65;
+transform: scale(.75) translateY(-0.6rem) translateX(0.15rem);
+}
+
+.text_field_label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  padding: 1rem 0.75rem;
+  pointer-events: none;
+  border: 1px solid transparent;
+  text-transform: capitalize;
+  font-family: var(--fontFamily);
+  transform-origin: 0 0;
+  transition: opacity .1s ease-in-out,transform .1s ease-in-out;
+  color: var(--input-color);
+}
+.text_field_label.sm {
+padding: .75rem 0.75rem;
+}
+.is_error .text_field_label {
+  color: var(--errorColor);
+}
+
+
+
+
+
+/**** Text field accessory component css styles *****/
+.acc_cmp {
+  position: absolute;
+  top: 50.5%;
+  right: 0;
+  transform: translateY(-50.5%);
+  z-index: 1;
+}
+
+.show_pw_button {
+    padding: .5em;
+    border: 0;
+    outline: 0;
+    background-color: transparent;
+    box-shadow: 0;
+    color: var(--input-color);
+    cursor: pointer;
+}
+.clear_btn:hover {
+  color: red;
+}

@@ -1,41 +1,61 @@
+import { useCallback, useState } from 'react';
+import { useGetMenuItems } from '../../Api/api';
+
 import { useAuth } from '../../hooks/useAuth';
 import Greeting from './Components/Greeting/Greeting';
 import Toolbar from './Components/Toolbar/Toolbar';
 import styles from './desktop.module.css';
 
-const Desktop = ({ ...props }) => {
+import ContextPanel from './Components/ContextPanel/ContextPanel';
+
+import DesktopMenuGrid from './Components/DesktopMenuGrid/DesktopMenuGrid';
+import WEModal from '../../Components/WEModal/WEModal';
+import useModal from '../../Components/WEModal/hooks/useModal';
+import GridMenuModal from './Components/DesktopMenuGrid/Components/GridMenuModal/GridMenuModal';
+import StatusBar from './Components/StatusBar/StatusBar';
+
+const Desktop = ({ ...props }) => {    
+  console.log("Desktop rendered");
+  
   const auth = useAuth();
+  const {status,data} = useGetMenuItems("dashGridMenu");
+  const {modalState,toggleModal} = useModal();
+  const [currentModal,setCurrentModal] = useState("");
+
+const gridItemOnClick = useCallback((e) => {
+  try {
+    let action = e.currentTarget.dataset.action;
+    
+    setCurrentModal(action);
+    toggleModal();
+    
+  } catch (error) {
+    console.error(error.message);
+  }
+},[toggleModal,setCurrentModal])
+
   return (
     <div className={styles.desktop_container}>
 
-      
-      <section className={styles.desktop_grid}>
+      <Toolbar location={"Dashboard"} />
 
-        <section className={styles.desktop_content_griditem}>
+      <Greeting name={auth?.user?.firstName ? auth.user.firstName : ""} />
 
-          <Toolbar location={"Dashboard"} />
-        
-          <Greeting name={"Ben"} />
-
-
-          <section className={styles.desktop_menu_grid}></section>
-
-        </section>
+      <DesktopMenuGrid>            
+        {!status.isLoading && data.data.map(menuItem => {
+          return (<DesktopMenuGrid.GridItem key={menuItem.id} heading={menuItem.title} action={menuItem.action} onClick={gridItemOnClick}/>)
+        })}
+      </DesktopMenuGrid>
 
 
-        <section className={styles.desktop_sidemenu_griditem}>
+      <WEModal config={{showCloseButton:false}}  isOpen={modalState} toggle={toggleModal}>
 
-          <section className={styles.desktop_sidemenu}>
-            <section>Active view</section>
-            <section>Body</section>
-            <section>Bottom nav</section>
-          </section>
+            <GridMenuModal action={currentModal} toggleModal={toggleModal}/>
 
-        </section>
+      </WEModal>
 
-      </section>
-
-      <section className={styles.desktop_statusbar}></section>
+      {/* <StatusBar /> */}
+      {/* <section className={styles.desktop_statusbar}></section> */}
        
     </div>
   );

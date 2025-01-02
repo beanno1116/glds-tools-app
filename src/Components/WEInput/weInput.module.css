@@ -1,0 +1,186 @@
+.container {
+    --backgroundColor: var(--input-bg-clr);
+    --borderColor: #486581;
+    --borderRadius: .25rem; 
+
+    --errorColor: #ED6A5A;
+    --successColor: #0CCE6B;
+
+    /* Textfield focus vars */
+    --onFocusBorderColor: #102A43;
+    --onFocusbackgroundColor: #102A43;
+    
+    /* Textfield font vars */
+    --fontSize: 1.25rem;
+    --fontSize-sm: .85rem;
+    --fontFamily: 'Secular One', sans-serif;
+    --color: rgba(255, 250, 250, 0.846);
+
+    --height: calc(3.5rem + 2px);
+    --height-sm: calc(2.75rem + 2px);
+    position: relative;
+    /* margin-bottom: 1em; */
+    z-index: 0;
+}
+
+/***** WEInput accessory components ******/
+
+.acc_cmp {
+  position: absolute;
+  top: 50.5%;
+  right: 0;
+  transform: translateY(-50.5%);
+  z-index: 1;
+}
+
+.clear_btn {
+    padding: .5em;
+    border: 0;
+    outline: 0;
+    background-color: transparent;
+    box-shadow: 0;
+    color: var(--errorCclr);
+    cursor: pointer;
+}
+.clear_btn:hover {
+  color: red;
+}
+
+
+/***** STATUS COMPONENT STYLE START *****/
+/* .status {
+  background-color: #102A43;
+} */
+/***** STATUS COMPONENT STYLE END *****/
+
+
+/***** INPUT COMPONENT STYLE START *****/
+.text_field {
+    position: relative;
+    display: block;  
+    width: 100%;
+    height: var(--height);
+    padding: 1.2rem 0.75rem;    
+    background-clip: padding-box;
+    background-color: var(--backgroundColor);
+    border: 1px solid var(--borderColor);
+    appearance: none;
+    border-radius: var(--borderRadius);
+    font-size: var(--fontSize);
+    font-weight: 400;
+    line-height: 1.5;
+    font-family: var(--fontFamily);
+    color: var(--color);
+}
+.text_field.sm {
+  height: var(--height-sm);
+  font-size: var(--fontSize-sm);
+}
+.text_field::placeholder {
+    color: transparent;
+}
+.text_field:hover {
+  border: 2.5px solid #2196f3;
+  box-shadow: 0px 3px 2px 6px #00bbbb26, 0px -3px 2px 6px #00bbbb26;
+}
+.text_field:focus {
+    padding-top: 1.625rem;
+    padding-bottom: 0.625rem;
+    outline: 0;
+    border: 2px solid #2196f3;
+    box-shadow: 0px 3px 2px 6px #00bbbb26, 0px -3px 2px 6px #00bbbb26;  
+}
+.text_field:not(:placeholder-shown) {
+    padding-top: 1.625rem;
+    padding-bottom: 0.625rem;
+}
+
+/* Textfield error css styles */
+.text_field[data-error="true"] {
+  border: 2px solid var(--errorColor);
+  box-shadow: 0px 3px 2px 6px #BB000036, 0px -3px 2px 6px #BB000036;
+  animation: shake .1s linear;
+  animation-iteration-count: 3;
+}
+
+.is_error .text_field {
+    border: 2px solid var(--errorColor);
+    animation: shake .1s linear;
+    animation-iteration-count: 3;
+}
+.is_error .text_field {
+  animation: shake .1s linear;
+  animation-iteration-count: 3;
+  transition: all .2s ease-in-out;
+}
+.is_error .text_field:focus {
+  border: 2px solid var(--errorColor);
+  animation: shake .1s linear;
+  animation-iteration-count: 3;
+}
+
+
+
+/* TextField Label CSS styles */
+.text_field:focus ~ label {
+    opacity: .65;
+    transform: scale(.75) translateY(-0.9rem) translateX(0.15rem);
+}
+.text_field:focus ~ label.sm {
+  opacity: .65;
+  transform: scale(.75) translateY(-0.5rem) translateX(0.15rem);
+}
+
+.text_field:not(:placeholder-shown) ~ label {
+    opacity: .65;
+    transform: scale(.75) translateY(-0.9rem) translateX(0.15rem);
+}
+.text_field:not(:placeholder-shown) ~ label.sm {
+  opacity: .65;
+  transform: scale(.75) translateY(-0.6rem) translateX(0.15rem);
+}
+
+.container label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    padding: 1rem 0.75rem;
+    pointer-events: none;
+    border: 1px solid transparent;
+    text-transform: capitalize;
+    font-family: var(--fontFamily);
+    transform-origin: 0 0;
+    transition: opacity .1s ease-in-out,transform .1s ease-in-out;
+    color: var(--color);
+}
+.container label.sm {
+  padding: .75rem 0.75rem;
+}
+.is_error label {
+    color: var(--errorColor);
+}
+
+
+/***** Theme styles *****/
+[class*="theme-"] {
+    background: var(--border-clr);
+    border: 1px solid var(--backgroundColor);
+    color: var(--text-clr);
+}
+
+
+.theme-bright {
+    --border-clr: #00B2CA;
+    --backgroundColor: #1D4E89;
+    --text-clr: #FBD1A2;
+}
+
+@keyframes shake {
+    0% {         
+        left: -5px;
+    }
+    100% {
+        right: -5px;
+    }
+}

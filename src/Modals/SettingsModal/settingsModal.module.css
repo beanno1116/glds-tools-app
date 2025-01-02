@@ -1,0 +1,80 @@
+.settings_modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+
+  /* background-color: #272537;   */
+  background-color: var(--primary-bg-clr);
+}
+
+
+
+
+
+.user_security_modal {  
+  position: relative;
+  display: flex;
+  flex-direction: column; 
+  background-color: var(--secondary-bg-clr);
+  border: 1px solid var(--primary-border-clr);
+  padding: 1rem;
+  gap: 1rem;
+  border-radius: 8px;
+  z-index: 1;  
+}
+.modal_title {
+  text-align: center;  
+  font-weight: 800;
+  color: var(--font-color);
+  /* font-family: "Bowlby One SC", sans-serif; */
+}
+.modal_grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.modal_graphic_container {
+  /* background-color: red; */
+}
+.modal_form_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 1rem;
+  gap: 1rem;  
+}
+.modal_form_row {
+  display: flex;
+  justify-content: center;
+  gap: .75rem;
+  width: 100%;
+}
+.modal_form_row > label,
+.modal_form_row > span {
+  font-size: 2.25rem;
+}
+.graphic {
+  opacity: .8;
+  filter: drop-shadow(2px 2px 4px rgba(255, 255, 255, 0.473));
+  transform: perspective(400px) rotate3D(0, 1, 0, 10deg);
+  -webkit-mask: 
+  linear-gradient(135deg,#000c 40%,#000,#000c 60%)
+  100% 100%/250% 250%;
+  transition: transform .2s ease-in-out;
+}
+.graphic.alt {
+  --r: 1,1;
+  -webkit-mask: 
+    linear-gradient(45deg,#000c 40%,#000,#000c 60%)
+    0 100%/250% 250%;
+}
+
+.graphic:hover {
+  -webkit-mask-position: 0 0;  
+  transform: perspective(400px) rotate3D(0, 0, 0, -10deg);
+}
+.graphic.alt:hover {
+  -webkit-mask-position: 100% 0;
+}
